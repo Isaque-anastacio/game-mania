@@ -28,59 +28,26 @@
 
   <h1>Jogos mais Vendidos</h1>
   <mat-grid-list cols="3" >
-    <mat-grid-tile>
+    <mat-grid-tile *ngFor="let produto of produtos">
       <mat-card class="example-card">
-        <img mat-card-image src="./assets/img/jogo1.webp" alt="jogo 1">
+        <img mat-card-image src="./assets/img/{{produto.foto}}" alt="jogo 1">
+
         <mat-card-header>
-          <mat-card-title>Jogo espacial</mat-card-title>
+          <mat-card-title>{{produto.produto}}</mat-card-title>
         </mat-card-header>
             <mat-card-content>
           <p>
-            Descrição do jogo.
+            {{produto.descricao}}
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <p>R$ 359,99</p>
+          <p>{{produto.preco | currency : 'BRL'}}</p>
           <button mat-button>Comprar</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
     
-    <mat-grid-tile>
-      <mat-card class="example-card">
-        <img mat-card-image src="./assets/img/jogo2.jpg" alt="jogo 2">
-        <mat-card-header>
-          <mat-card-title>Jogo de ação</mat-card-title>
-        </mat-card-header>
-            <mat-card-content>
-          <p>
-            Descrição do jogo.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <p>R$ 499,99</p>
-          <button mat-button>Comprar</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-    
-    <mat-grid-tile>
-      <mat-card class="example-card">
-        <img mat-card-image src="./assets/img/jogo3.jpg" alt="jogo 3">
-        <mat-card-header>
-          <mat-card-title>Jogo de aventura</mat-card-title>
-        </mat-card-header>
-            <mat-card-content>
-          <p>
-            Descrição do jogo.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <p>R$ 250,00</p>
-          <button mat-button>Comprar</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
+   
   </mat-grid-list>
     
  

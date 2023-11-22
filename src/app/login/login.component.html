@@ -2,16 +2,16 @@
     <section class="section-login">
         <h1>Login</h1>
         <form class="row g-3">
-            
+            Z
               <label for="staticUsuario" class="visually-hidden">Usuario</label>
-              <input type="text" class="form-control" id="staticUsuario" placeholder="email@exemplo.com">
+              <input type="text" name="Usuario" [(ngModel)]="usuario" class="form-control" id="staticUsuario" placeholder="email@exemplo.com">
             
                 <br>
               <label for="inputSenha" class="visually-hidden">Senha</label>
-              <input type="password" class="form-control" id="inputSenha" placeholder="Senha">
+              <input type="password" name="Senha" [(ngModel)]="senha"  class="form-control" id="inputSenha" placeholder="Senha">
           
                 <br>
-              <button type="submit" class="btn btn-primary mb-3">Confirma</button>
+              <button type="submit" class="btn btn-primary mb-3" (click)="fazerlogin()">Confirma</button>
           
           </form>
     </section>
